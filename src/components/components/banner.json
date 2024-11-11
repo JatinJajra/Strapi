@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_components_banners",
+  "info": {
+    "displayName": "Banner",
+    "icon": "crop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "first_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "second_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "final_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "light_text": {
+      "type": "string"
+    },
+    "first_card_title": {
+      "type": "string"
+    },
+    "second_card_title": {
+      "type": "string"
+    },
+    "final_card_title": {
+      "type": "string"
+    },
+    "first_card_subtitle": {
+      "type": "string"
+    },
+    "second_card_subtitle": {
+      "type": "string"
+    },
+    "final_card_subtitle": {
+      "type": "string"
+    }
+  }
+}

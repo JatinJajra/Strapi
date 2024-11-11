@@ -1,3 +1,4 @@
+// jai ganeshaye namh jai maa gungal jai teetis koti devi devta ki jai ho
 module.exports = ({ env }) => ({
   auth: {
     secret: env('ADMIN_JWT_SECRET'),

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_components_partners",
+  "info": {
+    "displayName": "Partners",
+    "icon": "emotionHappy"
+  },
+  "options": {},
+  "attributes": {
+    "partner": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
