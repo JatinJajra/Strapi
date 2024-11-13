@@ -62,6 +62,34 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsTabs extends Struct.ComponentSchema {
+  collectionName: 'components_components_tabs';
+  info: {
+    displayName: 'tabs';
+    icon: 'bulletList';
+  };
+  attributes: {};
+}
+
+export interface ComponentsPlatform extends Struct.ComponentSchema {
+  collectionName: 'components_components_platforms';
+  info: {
+    displayName: 'Platform';
+    icon: 'brush';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    main_image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    sub_image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    discretion: Schema.Attribute.Text & Schema.Attribute.Required;
+    checkone: Schema.Attribute.String;
+    checktwo: Schema.Attribute.String;
+    checkthree: Schema.Attribute.String;
+    checkfour: Schema.Attribute.String;
+    checkfive: Schema.Attribute.String;
+  };
+}
+
 export interface ComponentsPartners extends Struct.ComponentSchema {
   collectionName: 'components_components_partners';
   info: {
@@ -73,17 +101,84 @@ export interface ComponentsPartners extends Struct.ComponentSchema {
   };
 }
 
-export interface ComponentsBlog extends Struct.ComponentSchema {
-  collectionName: 'components_components_blogs';
+export interface ComponentsMonitoring extends Struct.ComponentSchema {
+  collectionName: 'components_components_monitorings';
   info: {
-    displayName: 'Blog';
-    icon: 'chartCircle';
+    displayName: 'Monitoring';
+    icon: 'command';
+  };
+  attributes: {
+    heading: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    discretion: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_components_features';
+  info: {
+    displayName: 'Features';
+    icon: 'crop';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    discretion: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ComponentsDieselMenuTabs extends Struct.ComponentSchema {
+  collectionName: 'components_components_diesel_menu_tabs';
+  info: {
+    displayName: 'Diesel Menu tabs';
+    icon: 'connector';
+  };
+  attributes: {
+    menu_lebal: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    discretion: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface ComponentsDieselGasGeneratorsMenu
+  extends Struct.ComponentSchema {
+  collectionName: 'components_components_diesel_gas_generators_menus';
+  info: {
+    displayName: 'Diesel Gas Generators Menu';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    discretion: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface ComponentsDieselGasGeneratorsDesign
+  extends Struct.ComponentSchema {
+  collectionName: 'components_components_diesel_gas_generators_designs';
+  info: {
+    displayName: 'Diesel Gas Generators Design';
+    icon: 'calendar';
+  };
+  attributes: {
+    main_title: Schema.Attribute.String & Schema.Attribute.Required;
+    discretion: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface ComponentsBlocks extends Struct.ComponentSchema {
+  collectionName: 'components_components_blocks';
+  info: {
+    displayName: 'blocks';
+    icon: 'dashboard';
     description: '';
   };
   attributes: {
     title: Schema.Attribute.String;
-    date: Schema.Attribute.Date;
-    image: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -118,8 +213,15 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.quote': SharedQuote;
       'shared.media': SharedMedia;
+      'components.tabs': ComponentsTabs;
+      'components.platform': ComponentsPlatform;
       'components.partners': ComponentsPartners;
-      'components.blog': ComponentsBlog;
+      'components.monitoring': ComponentsMonitoring;
+      'components.features': ComponentsFeatures;
+      'components.diesel-menu-tabs': ComponentsDieselMenuTabs;
+      'components.diesel-gas-generators-menu': ComponentsDieselGasGeneratorsMenu;
+      'components.diesel-gas-generators-design': ComponentsDieselGasGeneratorsDesign;
+      'components.blocks': ComponentsBlocks;
       'components.banner': ComponentsBanner;
     }
   }

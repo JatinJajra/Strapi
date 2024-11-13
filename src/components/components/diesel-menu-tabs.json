@@ -1,17 +1,19 @@
 {
-  "collectionName": "components_components_blogs",
+  "collectionName": "components_components_diesel_menu_tabs",
   "info": {
-    "displayName": "Blog",
-    "icon": "chartCircle",
-    "description": ""
+    "displayName": "Diesel Menu tabs",
+    "icon": "connector"
   },
   "options": {},
   "attributes": {
+    "menu_lebal": {
+      "type": "string"
+    },
     "title": {
       "type": "string"
     },
-    "date": {
-      "type": "date"
+    "discretion": {
+      "type": "text"
     },
     "image": {
       "allowedTypes": [

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_components_diesel_gas_generators_menus",
+  "info": {
+    "displayName": "Diesel Gas Generators Menu",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "discretion": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

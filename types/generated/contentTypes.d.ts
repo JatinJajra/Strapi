@@ -655,6 +655,45 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDynamicPageDynamicPage extends Struct.CollectionTypeSchema {
+  collectionName: 'dynamic_pages';
+  info: {
+    singularName: 'dynamic-page';
+    pluralName: 'dynamic-pages';
+    displayName: 'dynamic page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    design: Schema.Attribute.DynamicZone<
+      [
+        'components.diesel-gas-generators-design',
+        'components.diesel-gas-generators-menu',
+        'components.platform',
+        'components.monitoring',
+      ]
+    >;
+    blocks: Schema.Attribute.Component<'components.blocks', true>;
+    Features: Schema.Attribute.Component<'components.features', true>;
+    tabs: Schema.Attribute.Component<'components.diesel-menu-tabs', true>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::dynamic-page.dynamic-page'
+    > &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -700,7 +739,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.DynamicZone<
-      ['components.banner', 'components.partners', 'components.blog']
+      ['components.banner', 'components.partners']
     >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -1102,6 +1141,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::blog.blog': ApiBlogBlog;
       'api::category.category': ApiCategoryCategory;
+      'api::dynamic-page.dynamic-page': ApiDynamicPageDynamicPage;
       'api::global.global': ApiGlobalGlobal;
       'api::page.page': ApiPagePage;
       'admin::permission': AdminPermission;

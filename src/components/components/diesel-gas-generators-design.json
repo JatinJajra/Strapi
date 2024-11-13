@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_components_diesel_gas_generators_designs",
+  "info": {
+    "displayName": "Diesel Gas Generators Design",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "main_title": {
+      "type": "string",
+      "required": true
+    },
+    "discretion": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

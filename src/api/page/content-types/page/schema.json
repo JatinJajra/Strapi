@@ -16,8 +16,7 @@
       "type": "dynamiczone",
       "components": [
         "components.banner",
-        "components.partners",
-        "components.blog"
+        "components.partners"
       ]
     }
   }

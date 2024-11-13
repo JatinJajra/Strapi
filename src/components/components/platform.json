@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_components_platforms",
+  "info": {
+    "displayName": "Platform",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "main_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "sub_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "discretion": {
+      "type": "text",
+      "required": true
+    },
+    "checkone": {
+      "type": "string"
+    },
+    "checktwo": {
+      "type": "string"
+    },
+    "checkthree": {
+      "type": "string"
+    },
+    "checkfour": {
+      "type": "string"
+    },
+    "checkfive": {
+      "type": "string"
+    }
+  }
+}
