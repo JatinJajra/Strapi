@@ -95,9 +95,11 @@ export interface ComponentsPartners extends Struct.ComponentSchema {
   info: {
     displayName: 'Partners';
     icon: 'emotionHappy';
+    description: '';
   };
   attributes: {
-    partner: Schema.Attribute.Media<'images', true>;
+    partner_name: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -170,6 +172,19 @@ export interface ComponentsDieselGasGeneratorsDesign
   };
 }
 
+export interface ComponentsDashboardBlog extends Struct.ComponentSchema {
+  collectionName: 'components_components_dashboard_blogs';
+  info: {
+    displayName: 'dashboard_blog';
+    icon: 'calendar';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    date: Schema.Attribute.Date;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface ComponentsBlocks extends Struct.ComponentSchema {
   collectionName: 'components_components_blocks';
   info: {
@@ -221,6 +236,7 @@ declare module '@strapi/strapi' {
       'components.diesel-menu-tabs': ComponentsDieselMenuTabs;
       'components.diesel-gas-generators-menu': ComponentsDieselGasGeneratorsMenu;
       'components.diesel-gas-generators-design': ComponentsDieselGasGeneratorsDesign;
+      'components.dashboard-blog': ComponentsDashboardBlog;
       'components.blocks': ComponentsBlocks;
       'components.banner': ComponentsBanner;
     }

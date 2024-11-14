@@ -1,15 +1,17 @@
 {
-  "collectionName": "components_components_partners",
+  "collectionName": "components_components_dashboard_blogs",
   "info": {
-    "displayName": "Partners",
-    "icon": "emotionHappy",
-    "description": ""
+    "displayName": "dashboard_blog",
+    "icon": "calendar"
   },
   "options": {},
   "attributes": {
-    "partner_name": {
+    "title": {
       "type": "string",
       "required": true
+    },
+    "date": {
+      "type": "date"
     },
     "image": {
       "allowedTypes": [

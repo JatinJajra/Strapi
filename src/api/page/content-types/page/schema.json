@@ -12,12 +12,20 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "partner": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.partners"
+    },
     "banner": {
-      "type": "dynamiczone",
-      "components": [
-        "components.banner",
-        "components.partners"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "components.banner"
+    },
+    "blog": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.dashboard-blog"
     }
   }
 }
