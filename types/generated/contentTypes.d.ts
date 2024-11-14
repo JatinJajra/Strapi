@@ -736,9 +736,9 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    banner: Schema.Attribute.DynamicZone<
-      ['components.banner', 'components.partners']
-    >;
+    partner: Schema.Attribute.Component<'components.partners', true>;
+    banner: Schema.Attribute.Component<'components.banner', false>;
+    blog: Schema.Attribute.Component<'components.dashboard-blog', true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
