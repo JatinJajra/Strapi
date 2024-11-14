@@ -12,15 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "design": {
-      "type": "dynamiczone",
-      "components": [
-        "components.diesel-gas-generators-design",
-        "components.diesel-gas-generators-menu",
-        "components.platform",
-        "components.monitoring"
-      ]
-    },
     "blocks": {
       "type": "component",
       "repeatable": true,
@@ -35,6 +26,21 @@
       "type": "component",
       "repeatable": true,
       "component": "components.diesel-menu-tabs"
+    },
+    "first_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.diesel-gas-generators-design"
+    },
+    "Platform": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.platform"
+    },
+    "monitoring": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.monitoring"
     }
   }
 }

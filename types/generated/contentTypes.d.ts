@@ -667,17 +667,15 @@ export interface ApiDynamicPageDynamicPage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    design: Schema.Attribute.DynamicZone<
-      [
-        'components.diesel-gas-generators-design',
-        'components.diesel-gas-generators-menu',
-        'components.platform',
-        'components.monitoring',
-      ]
-    >;
     blocks: Schema.Attribute.Component<'components.blocks', true>;
     Features: Schema.Attribute.Component<'components.features', true>;
     tabs: Schema.Attribute.Component<'components.diesel-menu-tabs', true>;
+    first_section: Schema.Attribute.Component<
+      'components.diesel-gas-generators-design',
+      false
+    >;
+    Platform: Schema.Attribute.Component<'components.platform', false>;
+    monitoring: Schema.Attribute.Component<'components.monitoring', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
