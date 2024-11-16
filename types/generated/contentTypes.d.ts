@@ -660,7 +660,7 @@ export interface ApiDynamicPageDynamicPage extends Struct.CollectionTypeSchema {
   info: {
     singularName: 'dynamic-page';
     pluralName: 'dynamic-pages';
-    displayName: 'dynamic page';
+    displayName: 'Service page';
     description: '';
   };
   options: {
@@ -676,6 +676,7 @@ export interface ApiDynamicPageDynamicPage extends Struct.CollectionTypeSchema {
     >;
     Platform: Schema.Attribute.Component<'components.platform', false>;
     monitoring: Schema.Attribute.Component<'components.monitoring', false>;
+    partner: Schema.Attribute.Component<'components.partners', true>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -729,7 +730,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
   info: {
     singularName: 'page';
     pluralName: 'pages';
-    displayName: 'page';
+    displayName: 'Home Page';
     description: '';
   };
   options: {
